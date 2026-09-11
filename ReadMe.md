@@ -22,7 +22,7 @@ I chose to keep the domain as far away from business logic by layering business 
 
 ## Getting Started
 
-To add a new movement, add a classic that implements `IRobotActionStrategy`.
+To add a new movement, add a class that implements `IRobotActionStrategy`.
 
 ### Dependencies
 
