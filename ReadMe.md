@@ -4,17 +4,19 @@
 
 .NET 10 console application.
 
+I used design patterns, clean code and solid principles throughout the project.
+
 I used the strategy pattern and the interface segregation principle to make the code more maintainable and scalable.
 
 The strategy pattern allows different behaviours to be implemented and swapped without changing the robot domain code. Interface segregation ensures that classes only implement the contracts they need, reducing unnecessary dependencies.
 
 I also intentionally used internal and private classes and properties to convey intent around domain classes and properties, and factories to further enforce this.
 
-I used middlewhare for dipendancy injection.
+I used middleware for dependency injection.
 
-I used clean code architecture and principles intentionally to show good principles by using single responsibility principles, interface segregation, dependancy inversion. 
+I used clean code architecture and solid principles intentionally to show good principles by using single responsibility principles, interface segregation, dependency inversion. 
 
-I chose to keep the domain as far aslway from business logic by layering business logic and implementation logic separately throug Domain , Application/services.
+I chose to keep the domain as far away from business logic by layering business logic and implementation logic separately through Domain , Application/services.
 
 
 
@@ -24,7 +26,7 @@ To add a new movement, add a classic that implements `IRobotActionStrategy`.
 
 ### Dependencies
 
-- .NET 10
+- .NET 10 core
 - Windows 10
 
 ### Installing
