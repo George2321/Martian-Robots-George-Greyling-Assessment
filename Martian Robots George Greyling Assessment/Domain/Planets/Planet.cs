@@ -1,24 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+namespace Martian_Robots_George_Greyling_Assessment.Domain.Planets;
 
-namespace Martian_Robots_George_Greyling_Assessment.Domain.Planets
+public class Planet : IPlanet
 {
-    internal class Planet
+    public Planet(string name, int rowSize, int columnSize)
     {
-        private string Name { get; set; } = string.Empty;
-        private int RowSize { get; set; } = 0;
-        private int ColumnSize { get; set; } = 0;
-
-        internal Planet(string name, int rowSize, int columnSize)
-        {
-            Name = name;
-            RowSize = rowSize;
-            ColumnSize = columnSize;
-        }
-        public Planet CreatePlanet(string name, int rowSize, int columnSize)
-        {
-           return new Planet(name, rowSize, columnSize);
-        }     
+        Name = name;
+        RowSize = rowSize;
+        ColumnSize = columnSize;
     }
+
+    public string Name { get; }
+    public int RowSize { get; }
+    public int ColumnSize { get; }
 }

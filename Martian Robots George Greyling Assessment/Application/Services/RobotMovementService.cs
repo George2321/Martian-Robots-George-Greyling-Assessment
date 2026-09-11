@@ -1,22 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Martian_Robots_George_Greyling_Assessment.Domain.Planets;
 
-namespace Application.Services
+namespace Martian_Robots_George_Greyling_Assessment.Application.Services;
+
+internal class RobotMovementService
 {
-    internal class RobotMovementService
+    IPlanet _planet;
+
+
+    public RobotMovementService(IPlanet planet)
     {
-        public RobotMovementService() { }
+        _planet = planet;
+    }
 
-        public string MoveRobot(string instructionString)
-        {            
-
-
-
-
-            return instructionString;
-        }
-
-
+    public string MoveRobot(string instructionString)
+    {
+        return instructionString;
     }
 }

@@ -1,41 +1,33 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using static Martian_Robots_George_Greyling_Assessment.Domain.Robots.IRobotActionStrategy;
+namespace Martian_Robots_George_Greyling_Assessment.Domain.Robots;
 
-namespace Martian_Robots_George_Greyling_Assessment.Domain.Robots
+public class Robot
 {
-    internal class Robot
-    {
-        private string Name = string.Empty;
-        private int CordinateY = new();
-        private int CordinateX = new();
-        private string Orientation = string.Empty;
-        private readonly IEnumerable<IRobotActionStrategy> _actions;
+    private readonly IEnumerable<IRobotActionStrategy> _actions;
 
-        internal Robot(string Name, IEnumerable<IRobotActionStrategy> actions)
+    internal Robot(string name, IEnumerable<IRobotActionStrategy> actions)
+    {
+        Name = name;
+        Orientation = "N";
+        _actions = actions;
+    }
+
+    public string Name { get; }
+    public int CoordinateY { get; private set; }
+    public int CoordinateX { get; private set; }
+    public string Orientation { get; private set; }
+
+    public class Factory
+    {
+        private readonly IEnumerable<IRobotActionStrategy> _availableRobotActions;
+
+        public Factory(IEnumerable<IRobotActionStrategy> availableActions)
         {
-            this.Name = Name;
-            this.Orientation = "N";
-            _actions = actions;
+            _availableRobotActions = availableActions;
         }
 
-        internal class Factory
+        public Robot CreateRobot(string name)
         {
-            private readonly IEnumerable<IRobotActionStrategy> _availibleRobotActions;
-
-            public Factory(IEnumerable<IRobotActionStrategy> availableActions)
-            {
-                _availibleRobotActions = availableActions;
-            }
-
-            public Robot CreateRobot(string name)
-            {
-                var matchingActions = _availibleRobotActions;
-
-                return new Robot(name , matchingActions);
-            }
+            return new Robot(name, _availableRobotActions);
         }
     }
 }

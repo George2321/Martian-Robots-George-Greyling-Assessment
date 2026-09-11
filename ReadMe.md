@@ -1,10 +1,14 @@
 # Project Title
 
-Simple overview of use/purpose.
-
+Martian Planet adventures 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+.NET Core 10 Console application that simulates a Martian planet adventure game. Players can explore the Martian landscape, collect resources, and complete missions.
+
+I decided to use the strategy patern and the interface segregation principle to make the code more maintainable and scalable. 
+
+The strategy pattern allows for different behaviors to be implemented and swapped out witout changing the domain code for robot, 
+while the interface segregation principle ensures that classes only implement the methods they need, reducing unnecessary dependencies.
 
 ## Getting Started
 
