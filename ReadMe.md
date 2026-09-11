@@ -8,9 +8,19 @@ I used the strategy pattern and the interface segregation principle to make the 
 
 The strategy pattern allows different behaviours to be implemented and swapped without changing the robot domain code. Interface segregation ensures that classes only implement the contracts they need, reducing unnecessary dependencies.
 
+I also intentionally used internal and private classes and properties to convey intent around domain classes and properties, and factories to further enforce this.
+
+I used middlewhare for dipendancy injection.
+
+I used clean code architecture and principles intentionally to show good principles by using single responsibility principles, interface segregation, dependancy inversion. 
+
+I chose to keep the domain as far aslway from business logic by layering business logic and implementation logic separately throug Domain , Application/services.
+
+
+
 ## Getting Started
 
-To add a new movement, add a class that implements `IRobotActionStrategy`.
+To add a new movement, add a classic that implements `IRobotActionStrategy`.
 
 ### Dependencies
 
