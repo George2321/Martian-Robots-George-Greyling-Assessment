@@ -1,10 +1,10 @@
 namespace Martian_Robots_George_Greyling_Assessment.Domain.Robots;
 
-public class Robot
+internal sealed class Robot : IRobot
 {
     private readonly IEnumerable<IRobotActionStrategy> _actions;
 
-    internal Robot(string name, IEnumerable<IRobotActionStrategy> actions)
+    private Robot(string name, IEnumerable<IRobotActionStrategy> actions)
     {
         Name = name;
         Orientation = "N";
@@ -16,7 +16,7 @@ public class Robot
     public int CoordinateX { get; private set; }
     public string Orientation { get; private set; }
 
-    public class Factory
+    internal sealed class Factory
     {
         private readonly IEnumerable<IRobotActionStrategy> _availableRobotActions;
 

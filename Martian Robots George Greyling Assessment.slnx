@@ -3,4 +3,5 @@
     <File Path="ReadMe.md" />
   </Folder>
   <Project Path="Martian Robots George Greyling Assessment/Martian Robots George Greyling Assessment.csproj" />
+  <Project Path="Martian Robots George Greyling Assessment.Tests/Martian Robots George Greyling Assessment.Tests.csproj" />
 </Solution>

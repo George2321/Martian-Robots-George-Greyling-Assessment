@@ -1,8 +1,8 @@
 namespace Martian_Robots_George_Greyling_Assessment.Domain.Planets;
 
-public class Planet : IPlanet
+internal sealed class Planet : IPlanet
 {
-    public Planet(string name, int rowSize, int columnSize)
+    internal Planet(string name, int rowSize, int columnSize)
     {
         Name = name;
         RowSize = rowSize;
