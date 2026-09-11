@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 
-namespace Domain
+namespace Martian_Robots_George_Greyling_Assessment.Domain.Robots
 {
     public interface IRobotActionStrategy
     {
-        public List<string> SuportedActions(string action);          
+        public string RobotAction(string action);
     }
 }
